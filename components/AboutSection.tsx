@@ -8,7 +8,7 @@ export default function AboutSection() {
   const [selectedClub, setSelectedClub] = useState<any>(null);
 
   return (
-      <section id="about" className="py-20">
+      <section id="about" className="py-5">
         <div className="mx-auto w-full max-w-[1440px] px-4">
 
           <h1 className="text-5xl font-bold text-center tracking-tight text-slate-900">
@@ -120,33 +120,34 @@ export default function AboutSection() {
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
               <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-lg">
 
-                onClick={() => {
-                console.log("clicked");
-                setSelectedClub(club);
-              }}
-
                 <div className="flex items-center gap-4">
                   <img
                       src={selectedClub.logo}
-                      className="h-12 w-12 rounded-md"
+                      className="h-14 w-14 rounded-md object-cover"
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900">
-                      {selectedClub.name}
-                    </h3>
-                    <p className="text-sm text-slate-500">
-                      {selectedClub.role}
-                    </p>
+                    <h3 className="text-lg font-semibold text-slate-900">{selectedClub.name}</h3>
+                    <p className="text-sm text-slate-500">{selectedClub.role}</p>
                   </div>
                 </div>
 
-                <p className="mt-4 text-slate-600">
-                  {selectedClub.description}
-                </p>
+                <div className="mt-5 border-t border-slate-200 pt-4">
+                  <h4 className="text-sm font-medium text-slate-800 mb-2 text-center">Timeline</h4>
+                  <ul className="space-y-2">
+                    {selectedClub.timeline.map((item) => (
+                        <li key={item.year} className="flex items-center gap-12">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold">
+                {item.year}
+              </span>
+                          <span className="text-slate-600">{item.position}</span>
+                        </li>
+                    ))}
+                  </ul>
+                </div>
 
                 <button
                     onClick={() => setSelectedClub(null)}
-                    className="mt-6 rounded-lg bg-slate-900 px-4 py-2 text-white hover:bg-slate-700"
+                    className="mt-6 w-full rounded-lg bg-slate-900 px-4 py-2 text-white hover:bg-slate-700"
                 >
                   Close
                 </button>
