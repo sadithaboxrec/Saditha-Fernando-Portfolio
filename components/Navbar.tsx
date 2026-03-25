@@ -53,12 +53,12 @@ export default function Navbar() {
 
   return (
       <header className="fixed inset-x-0 top-0 z-50">
-        <nav className="mx-auto mt-4 w-[92%] max-w-6xl rounded-2xl border border-white/60 bg-white/70 px-5 py-3 shadow-sm backdrop-blur-md">
+        <nav className="mx-auto mt-4 w-[92%] max-w-6xl rounded-2xl border border-white/60 bg-white/70 px-5 py-3 shadow-sm backdrop-blur-md relative z-[1000]">
 
           <div className="flex items-center justify-between">
 
 
-            <a href="#home" className="text-3xl font-semibold tracking-tight text-slate-900">
+            <a href="#home" className="text-3xl font-semibold tracking-tight text-slate-900 z-[1000] relative">
               Saditha
             </a>
 
@@ -66,7 +66,7 @@ export default function Navbar() {
             <button
                 type="button"
                 aria-expanded={open}
-                className="rounded-md p-2 text-slate-700 transition hover:bg-slate-100 md:hidden"
+                className="rounded-md p-2 text-slate-700 transition hover:bg-slate-100 md:hidden relative z-[1000]"
                 onClick={() => setOpen((prev) => !prev)} // toggle menu
             >
               <span className="block h-0.5 w-5 bg-current" />
@@ -75,7 +75,7 @@ export default function Navbar() {
             </button>
 
             {/* Desktop Navigation */}
-            <ul className="hidden items-center gap-3 md:flex">
+            <ul className="hidden items-center gap-3 md:flex relative z-[1000] ">
               {navItems.map((item) => {
                 // Check if  item is the currently active section
                 const isActive = active === item.href;
@@ -105,7 +105,7 @@ export default function Navbar() {
 
           {/* Mobile Menu  */}
           {open && (
-              <ul className="mt-3 space-y-1 border-t border-slate-200 pt-3 md:hidden">
+              <ul className="mt-3 space-y-1 border-t border-slate-200 pt-3 md:hidden relative z-[1000] ">
                 {navItems.map((item) => {
                   const isActive = active === item.href;
 

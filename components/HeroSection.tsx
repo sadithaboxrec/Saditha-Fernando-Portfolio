@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
       <section className="flex min-h-screen items-center pt-16 md:pt-20" id="home" >
-        <div className="mx-auto grid w-[92%] max-w-6xl items-center gap-10 md:grid-cols-2">
+        <div className="mx-auto grid w-full max-w-[1440px] items-center gap-10 md:grid-cols-2">
 
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center ">
             {/*<div className="relative h-60 w-60 overflow-hidden rounded-full border-4 border-white shadow-md sm:h-72 sm:w-72">*/}
-            <div className="relative h-72 w-72 overflow-hidden rounded-full border-4 border-white shadow-md sm:h-96 sm:w-96 lg:h-[420px] lg:w-[420px]">
+            <div className="relative h-80 w-80 overflow-hidden rounded-full border-4 border-white shadow-md sm:h-96 sm:w-96 lg:h-[480px] lg:w-[480px]">
               <Image
                 src="/images/hero/saditha.jpeg"
                 alt=" Saditha"
@@ -17,6 +17,7 @@ export default function HeroSection() {
               />
             </div>
           </div>
+
 
           <div className="animate-fade-in text-center md:text-left">
             <p className="mb-3 text-4xl font-semibold uppercase tracking-[0.2em] text-slate-500">
