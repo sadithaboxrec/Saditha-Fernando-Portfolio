@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useEffect  } from "react";
 import { currentSkills, learningSkills } from "@/data/skills";
 import { clubs, type Club } from "@/data/clubs";
 
@@ -8,6 +8,13 @@ export default function AboutSection() {
   // const [selectedClub, setSelectedClub] = useState<any>(null);
 
   const [selectedClub, setSelectedClub] = useState<Club | null>(clubs[0]);
+
+  const [mounted, setMounted] = useState(false);  // to prevent automatically loading
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
 
   return (
       <section id="about" className="py-5">
@@ -118,10 +125,9 @@ export default function AboutSection() {
         </div>
 
         {/*  MODAL */}
-        {selectedClub && (
+        {selectedClub && mounted && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
               <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-lg">
-
                 <div className="flex items-center gap-4">
                   <img
                       src={selectedClub.logo}
@@ -136,11 +142,11 @@ export default function AboutSection() {
                 <div className="mt-5 border-t border-slate-200 pt-4">
                   <h4 className="text-sm font-medium text-slate-800 mb-2 text-center">Timeline</h4>
                   <ul className="space-y-2">
-                    {selectedClub.timeline.map((item) => (
+                    {selectedClub.timeline.map((item: any) => (
                         <li key={item.year} className="flex items-center gap-12">
-                            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold">
-                              {item.year}
-                            </span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold">
+                      {item.year}
+                    </span>
                           <span className="text-slate-600">{item.position}</span>
                         </li>
                     ))}

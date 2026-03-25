@@ -66,7 +66,7 @@ export default function ProjectsSection() {
                             rel="noreferrer"
                             className="font-medium text-slate-700 underline-offset-2 transition hover:text-slate-900 hover:underline"
                         >
-                          GitHub
+                            <i className="fab fa-github text-3xl"></i>
                         </a>
                     )}
                     {project.demo && (
