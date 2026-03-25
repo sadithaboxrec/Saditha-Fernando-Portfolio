@@ -1,10 +1,44 @@
 "use client";
-
+import { useState } from "react";
 import { socialLinks } from "@/data/socialLinks";
 
 export default function ContactSection() {
-  return (
-      <section id="contact" className="py-20">
+
+  const [result, setResult] = useState({ message: "", type: "" });
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+
+    setResult({ message: "Sending...", type: "loading" });
+
+    const formData = new FormData(form);
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: formData });
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        data = { success: false, message: "Invalid response from Web3Forms" };
+      }
+
+      if (data.success) {
+        setResult({ message: "Form Submitted Successfully!", type: "success" });
+        form.reset();
+      } else {
+        setResult({ message: data.message || "Something went wrong", type: "error" });
+      }
+    } catch (err) {
+      console.error(err);
+      setResult({ message: "Server error. Try again later.", type: "error" });
+    }
+
+    setTimeout(() => setResult({ message: "", type: "" }), 5000);
+  };
+    return (
+      <section id="contact" className="py-8">
         <div className="mx-auto w-full max-w-[1440px] px-4">
           {/*  header outside the box */}
           <h2 className="text-5xl font-bold text-center tracking-tight text-slate-900">
@@ -18,7 +52,7 @@ export default function ContactSection() {
                 Do you want to contact me, just fill out the form.
               </p>
 
-              <form className="mt-6 space-y-4">
+              <form className="mt-6 space-y-4" onSubmit={onSubmit}>
                 <div>
                   <label htmlFor="name" className="mb-1 block text-sm font-medium text-slate-700">
                     Name
@@ -67,6 +101,17 @@ export default function ContactSection() {
                 >
                   Send Message
                 </button>
+
+                {result.message && (
+                    <p className={`mt-4 text-center font-medium ${
+                        result.type === "loading" ? "text-blue-500" :
+                            result.type === "success" ? "text-green-600" :
+                                "text-red-600"
+                    }`}>
+                      {result.message}
+                    </p>
+                )}
+
               </form>
             </div>
 
