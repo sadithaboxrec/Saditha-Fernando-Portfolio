@@ -12,9 +12,9 @@ export default function ProjectsSection() {
   }, [activeFilter]);
 
   return (
-      <section id="projects" className="py-20">
+      <section id="projects" className="py-10">
         <div className="mx-auto w-full max-w-[1440px] px-4">
-          <h2 className="text-5xl text-center font-bold tracking-tight text-slate-900">Projects</h2>
+          <h2 className="text-5xl text-center font-bold tracking-tight text-slate-900">My Projects</h2>
 
           {/* Filters */}
           <div className="mt-6 justify-center flex flex-wrap gap-3">
