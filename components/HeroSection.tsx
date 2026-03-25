@@ -33,7 +33,7 @@ export default function HeroSection() {
 
             <div className="mt-8">
               <a
-                href="/#"
+                href="/Saditha%20Fernando.pdf"
                 className="inline-flex items-center rounded-full bg-slate-900 px-6 py-3 text-l font-semibold text-white transition hover:bg-slate-700"
                 download
               >
