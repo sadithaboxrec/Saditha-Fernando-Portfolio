@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { currentSkills, learningSkills } from "@/data/skills";
-import { clubs } from "@/data/clubs";
+import { clubs, type Club } from "@/data/clubs";
 
 export default function AboutSection() {
-  const [selectedClub, setSelectedClub] = useState<any>(null);
+  // const [selectedClub, setSelectedClub] = useState<any>(null);
+
+  const [selectedClub, setSelectedClub] = useState<Club | null>(clubs[0]);
 
   return (
       <section id="about" className="py-5">
@@ -136,9 +138,9 @@ export default function AboutSection() {
                   <ul className="space-y-2">
                     {selectedClub.timeline.map((item) => (
                         <li key={item.year} className="flex items-center gap-12">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold">
-                {item.year}
-              </span>
+                            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 text-xs font-semibold">
+                              {item.year}
+                            </span>
                           <span className="text-slate-600">{item.position}</span>
                         </li>
                     ))}
