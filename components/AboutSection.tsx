@@ -7,7 +7,8 @@ import { clubs, type Club } from "@/data/clubs";
 export default function AboutSection() {
   // const [selectedClub, setSelectedClub] = useState<any>(null);
 
-  const [selectedClub, setSelectedClub] = useState<Club | null>(clubs[0]);
+  // const [selectedClub, setSelectedClub] = useState<Club | null>(clubs[0]);
+  const [selectedClub, setSelectedClub] = useState<Club | null>(null);
 
   const [mounted, setMounted] = useState(false);  // to prevent automatically loading
 
@@ -15,6 +16,7 @@ export default function AboutSection() {
     setMounted(true);
   }, []);
 
+  if (!mounted) return null;
 
   return (
       <section id="about" className="py-5">
