@@ -148,7 +148,7 @@ export default function ContactSection() {
                           rel="noreferrer"
                           className={`flex items-center gap-9 rounded-2xl border border-slate-200 bg-white px-3 py-2 text-base font-semibold text-slate-800 
                           shadow-sm transition transform hover:-translate-y-1 hover:shadow-lg max-w-[350px]`}
-                          style={{ borderLeft: `4px solid ${link.color || "#000"}` }}
+                          style={{ borderLeft: `4px solid #000` }}
                       >
                         <img src={link.icon} alt={link.name} className="h-12 w-12" />
                         <span>{link.name}</span>

@@ -6,6 +6,7 @@ export type Project = {
   stack: string[];
   category: Exclude<ProjectCategory, "All">;
   github?: string;
+  demo?: string;
 };
 
 export const projectFilters: ProjectCategory[] = [
