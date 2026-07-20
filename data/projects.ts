@@ -20,13 +20,13 @@ export const projectFilters: ProjectCategory[] = [
 
 export const projects: Project[] = [
 
-  {
-    title: "AI Image Generator Web App",
-    description: "Application that generates images using Stability AI API with a Spring Boot backend.",
-    stack: ["Spring Boot", "Stability AI API"],
-    category: "AI/ML",
-    github: "https://github.com/sadithaboxrec/AI-image-generator-web"
-  },
+  // {
+  //   title: "AI Image Generator Web App",
+  //   description: "Application that generates images using Stability AI API with a Spring Boot backend.",
+  //   stack: ["Spring Boot", "Stability AI API"],
+  //   category: "AI/ML",
+  //   github: "https://github.com/sadithaboxrec/AI-image-generator-web"
+  // },
   {
     title: "Flask Task Management App",
     description: "Task management system with a React frontend and Flask backend for handling user tasks and workflows.",
@@ -56,13 +56,13 @@ export const projects: Project[] = [
     github: "https://github.com/sadithaboxrec/WarehouseProject"
   },
 
-  {
-    title: "Project Management Web Application",
-    description: "Web-based system for managing projects and tasks with secure authentication and role-based access control.",
-    stack: ["Angular", "Tailwind CSS", "Spring Boot", "Spring Security"],
-    category: "Springboot",
-    github: "https://github.com/sadithaboxrec/Task-Management-WebApplication"
-  },
+  // {
+  //   title: "Project Management Web Application",
+  //   description: "Web-based system for managing projects and tasks with secure authentication and role-based access control.",
+  //   stack: ["Angular", "Tailwind CSS", "Spring Boot", "Spring Security"],
+  //   category: "Springboot",
+  //   github: "https://github.com/sadithaboxrec/Task-Management-WebApplication"
+  // },
 
   {
     title: "Employee Management System with Testing",
