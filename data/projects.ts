@@ -19,13 +19,7 @@ export const projectFilters: ProjectCategory[] = [
 ];
 
 export const projects: Project[] = [
-  {
-    title: "Project Management Web Application",
-    description: "Web-based system for managing projects and tasks with secure authentication and role-based access control.",
-    stack: ["Angular", "Tailwind CSS", "Spring Boot", "Spring Security"],
-    category: "Springboot",
-    github: "https://github.com/sadithaboxrec/Task-Management-WebApplication"
-  },
+
   {
     title: "AI Image Generator Web App",
     description: "Application that generates images using Stability AI API with a Spring Boot backend.",
@@ -61,6 +55,15 @@ export const projects: Project[] = [
     category: "Springboot",
     github: "https://github.com/sadithaboxrec/WarehouseProject"
   },
+
+  {
+    title: "Project Management Web Application",
+    description: "Web-based system for managing projects and tasks with secure authentication and role-based access control.",
+    stack: ["Angular", "Tailwind CSS", "Spring Boot", "Spring Security"],
+    category: "Springboot",
+    github: "https://github.com/sadithaboxrec/Task-Management-WebApplication"
+  },
+
   {
     title: "Employee Management System with Testing",
     description: "Spring Boot application with integrated Spring Security and React frontend, validated through unit testing with JUnit and end-to-end testing using Selenium.",
