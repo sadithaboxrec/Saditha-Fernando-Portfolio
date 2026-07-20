@@ -1,4 +1,4 @@
-export type ProjectCategory = "All" | "Springboot" | "Flask" | "AI/ML" | "Testing";
+export type ProjectCategory = "All" | "Springboot" | "Flask" | "AI/ML" | "Testing" | "For FinTech";
 
 export type Project = {
   title: string;
@@ -14,7 +14,8 @@ export const projectFilters: ProjectCategory[] = [
   "Springboot",
   "Flask",
   "AI/ML",
-  "Testing"
+  "Testing",
+  "For FinTech",
 ];
 
 export const projects: Project[] = [
@@ -94,5 +95,90 @@ export const projects: Project[] = [
     stack: ["Flutter", "Flask", "Machine Learning"],
     category: "AI/ML",
     github: "https://github.com/sadithaboxrec/Score-Predict-APP-simple-"
-  }
+  },
+
+
+  // for fintech to check
+
+  {
+    title: "Financial Manager Application",
+    description:
+        "Personal finance management platform with income and expense tracking, dashboard analytics, JWT authentication, email verification, and Cloudinary integration.",
+    stack: [
+      "Spring Boot",
+      "JWT",
+      "MySQL",
+      "Cloudinary",
+    ],
+    category: "For FinTech",
+    github: "https://github.com/sadithaboxrec/Money-Manager-Web",
+  },
+  {
+    title: "BookMart - Ecommerce Bookshop Backend",
+    description:
+        "Spring Boot backend for an e-commerce platform featuring JWT authentication, guest cart merging, seller dashboard, Cloudinary image uploads, and Razorpay payment integration.",
+    stack: [
+      "Spring Boot",
+      "MongoDB",
+      "JWT",
+      "Razorpay",
+      "Cloudinary",
+    ],
+    category: "For FinTech",
+    github: "https://github.com/sadithaboxrec/BookMart-Web",
+  },
+  {
+    title: "URL Shortener Platform",
+    description:
+        "Scalable FastAPI application with PostgreSQL, Redis rate limiting, session authentication, Docker deployment, QR code generation, and role-based access.",
+    stack: [
+      "FastAPI",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "SQLAlchemy",
+    ],
+    category: "For FinTech",
+    github: "https://github.com/sadithaboxrec/Url-Shortener-App",
+  },
+  {
+    title: "AI Image Generator Web Application",
+    description:
+        "Spring Boot REST API integrating Stability AI for AI-powered image generation from text prompts and images.",
+    stack: [
+      "Spring Boot",
+      "Stability AI API",
+      "REST API",
+    ],
+    category: "For FinTech",
+    github: "https://github.com/sadithaboxrec/AI-image-generator-web",
+  },
+  {
+    title: "Project Management Web Application",
+    description:
+        "Project and task management application with Spring Boot, Angular, Spring Security, and role-based access control.",
+    stack: [
+      "Spring Boot",
+      "Angular",
+      "Spring Security",
+      "Tailwind CSS",
+    ],
+    category: "For FinTech",
+    github: "https://github.com/sadithaboxrec/Task-Management-WebApplication",
+  },
+  {
+    title: "Mental Healthcare Mobile Application",
+    description:
+        "Flutter and Flask application with AI-based patient monitoring, real-time chat, push notifications, and multi-role access for patients, guardians, and doctors.",
+    stack: [
+      "Flutter",
+      "Flask",
+      "MVC",
+      "AI",
+    ],
+    category: "For FinTech",
+    github: "https://github.com/sadithaboxrec/Mental-HealthCare-Application_Project",
+  },
+
 ];

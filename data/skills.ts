@@ -3,15 +3,14 @@ export const currentSkills = [
     { name: "Spring Boot", icon: "/images/skills/springboot.png" },
     { name: "Python", icon: "/images/skills/python.png" },
     { name: "Flask", icon: "/images/skills/flask.png" },
-    { name: "Salesforce", icon: "/images/skills/salesforce.png" },
     { name: "Next.js", icon: "images/skills/next.png" },
     { name: "Selenium", icon: "/images/skills/se.png" },
-    { name: "Junit", icon: "/images/skills/junit.png" },
+    { name: "FastApi", icon: "/images/skills/fastapi.png" },
     { name: "Flutter", icon: "/images/skills/flutter.png" },
 ];
 
 export const learningSkills = [
-    { name: "TensorFlow", icon: "/images/skills/tensorflow.png" },
-    { name: "PyTorch", icon: "/images/skills/pytorch.png" },
-    { name: "Test NG", icon: "/images/skills/testng.png" },
+    { name: "Go Lang", icon: "/images/skills/golang.png" },
+    { name: "C++", icon: "/images/skills/c++.png" },
+
 ];

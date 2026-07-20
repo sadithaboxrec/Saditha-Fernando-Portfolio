@@ -29,7 +29,15 @@ export const clubs: Club[] = [
         timeline: [
             { year: 2024, position: "Executive Committee Member" },
             { year: 2025, position: "Vice Treasurer" },
-            { year: 2026, position: "Await" },
+            { year: 2026, position: "Treasurer" },
         ],
     },
+    {
+        name: "AWS Student Builder Group of NSBM",
+        role: "Core Team Member",
+        logo: " ",
+        timeline: [
+            { year: 2026, position: "Core Team Member" },
+        ],
+    }
 ];
